@@ -1,5 +1,8 @@
 
 
+
+
+
     var pos = 0, quiz, quizStatus, question, choice, choices, chA, chB, chC, correct = 0;
 
             // My vars to grab various HTML elements by ID quickly.
@@ -33,19 +36,21 @@ var questions = [
                     // This is to initiate the start of the game upon window load.
             window.addEventListener("load", startQuiz, false);
 
+
+            var quizStatus = get("quizStatus");
                 // This is the function that will start upon window load.
         var startQuiz = { 
         pos = 0,
         correct = 0,
-       ('quizStatus').innerHTML = "Question "+(pos+1)+" of "+questions.length,
+        quizStatus = "Question "+(pos+1)+" of 9";
         question = questions [pos][0];
         chA = questions[pos][1];
         chB = questions[pos][2];
         chC = questions[pos][3];
         questionbox.innerHTML = "<h3>"+question+"</h3>";
-        answerbox.innerHTML += "<input type='radio' name='choices' value='A'> "+chA+"<br>";
-        answerbox.innerHTML += "<input type='radio' name='choices' value='B'> "+chB+"<br>";
-        answerbox.innerHTML += "<input type='radio' name='choices' value='C'> "+chC+"<br>";
+        answerbox.innerHTML += "<input type='radio' id='choices' value='A'> "+chA+"<br>";
+        answerbox.innerHTML += "<input type='radio' id='choices' value='B'> "+chB+"<br>";
+        answerbox.innerHTML += "<input type='radio' id='choices' value='C'> "+chC+"<br>";
         answerbox.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
 };
 
@@ -54,7 +59,7 @@ var questions = [
 
 var submit = function submission {
 
-    choices = getElementByName('choices');
+    choices = getElementById('choices');
     for (var i = 0; i<choices.length; i++) {
         if (choices[i].checked) {
             choice = choices[i].value;
@@ -69,7 +74,7 @@ var submit = function submission {
 }
 
 function renderQuestion(){
-    quiz = get("questionbox");
+    nextQuestion = get("questionbox");
     if(pos >= questions.length){
       questionbox.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
       get("quizStatus").innerHTML = "Test completed";
@@ -81,7 +86,7 @@ function renderQuestion(){
       
     }
 
-    get("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+    get("quizStatus").innerHTML = "Question "+(pos+1)+" of 9";
     question = questions[pos][0];
     chA = questions[pos][1];
     chB = questions[pos][2];

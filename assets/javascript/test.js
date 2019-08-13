@@ -24,7 +24,7 @@ var answerbox = get("answerbox");
 function renderQuestion(){
   questionsrender = get("questionbox");
   if(pos >= questions.length){
-    questionsrender.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+    questionsrender.innerHTML = "<h2>You got "+correct+" of "+questions.length" questions correct</h2>";
     get("test_status").innerHTML = "Test completed";
     // resets the variable to allow users to restart the test
     pos = 0;
@@ -32,7 +32,7 @@ function renderQuestion(){
     // stops rest of renderQuestion function running when test is completed
     return false;
   }
-  get("quizStatus").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+  get("quizStatus").innerHTML = "Question "+(pos+1)+" of "+questions.length";
   question = questions[pos][0];
   chA = questions[pos][1];
   chB = questions[pos][2];
