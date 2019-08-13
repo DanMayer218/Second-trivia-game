@@ -8,7 +8,7 @@
 
 
     <!-- css reset link -->
-            <link rel="stylesheet" href="/assets/css/reset.css">
+            <link rel="stylesheet" href="reset.css">
 
                 <!-- my style link CSS -->
                 <link rel="stylesheet" type="text/css" href="/assets/css/style.css"> 
@@ -23,6 +23,9 @@
                     <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
                     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
 
+                    <script src="/assets/javascript/test.js"></script>
+
+
   </head>
 
 
@@ -33,26 +36,25 @@
         
         <!-- Header tag -->
         <h1 id="header" style="width: 100%; height: 100px;background-color: white; margin-top: 20px;text-align: center; 
-        font-family: 'Allerta Stencil', sans-serif; sans-serif; font-size: 50px; border: black 3px solid;">Beat my clock!!!!!</h1>
+        font-family: 'Allerta Stencil', sans-serif;font-size: 50px; color: black; border: black 3px solid;">Beat my clock!!!!!</h1>
 
-        <!-- Section 1 -->
+        <!-- Counter box -->
              <div id="sec1 counterbox" style="width: 100%; height: 100px;background-color: white; margin-top: 20px;text-align: center; 
-             font-family: 'Shadows Into Light Two', cursive; font-size: 35px; border: black 3px solid;">
-                TIMER HERE
+             font-family: 'Shadows Into Light Two', cursive; font-size: 35px; color: black; border: black 3px solid;">
                    </div>
-
-                    <div style="width: 100%; height: 150px;background-color: white; margin-top: 20px;text-align: center; 
-                    font-family: 'Shadows Into Light Two', cursive; font-size: 35px; border: black 3px solid;">QUESTIONS
-                    <div id="questionbox"></div>
+                      <!-- Questionbox -->
+                    <div id="questionbox quizStatus" style="width: 100%; height: 150px;background-color: white; margin-top: 20px;text-align: center; 
+                    font-family: 'Shadows Into Light Two', cursive; font-size: 35px; color: black; border: black 3px solid;">
+                
                     </div>
-
-                                <div id="answerbox" style="width: 100%; height: 300px;background-color: white; margin-top: 20px;text-align: center; 
-                                font-family: 'Shadows Into Light Two', cursive; font-size: 35px; border: black 3px solid;">ANSWERS
+                                <!-- Answer box -->
+                                <div id="answerbox chA chB chC input" style="width: 100%; height: 300px;background-color: white; margin-top: 20px;text-align: center; 
+                                font-family: 'Shadows Into Light Two', cursive; font-size: 35px; color: black; border: black 3px solid;">
 
                                 </div>
-
+                                          <!-- Results box -->
                                          <div id="resultbox" style="width: 100%; height: 150px;background-color: white; margin-top: 20px;text-align: center; 
-                                         font-family: 'Shadows Into Light Two', cursive; font-size: 35px; border: black 3px solid;">RESULTS
+                                         font-family: 'Shadows Into Light Two', cursive; font-size: 35px; color: black; border: black 3px solid;">
 
                                              </div>
 
@@ -65,6 +67,7 @@
 </script>
 <!-- my javascript link -->
 <script src="/assets/javascript/app.js"></script>
+
 <!-- Jquery library link -->
 <script src="https://code.jquery.com/jquery-3.4.1.js"
 integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
