@@ -150,7 +150,7 @@ $(document).ready(function() {
       if (questCorrect === true) {
         $(this).css("background", "#5CB85C");
         questionBank[count].correct =
-          "I see youve been practicing young cricket";
+          "CORRECT!";
         count++;
         clearInterval(intervalID);
         time = 20;
@@ -160,7 +160,7 @@ $(document).ready(function() {
       } else {
         $(this).css("background", "#D9534F");
         questionBank[count].correct =
-          "This is bootcamp coder! your never going to survive if you dont know your stuff!!";
+          "VERY WRONG!";
         count++;
         clearInterval(intervalID);
         time = 20;
